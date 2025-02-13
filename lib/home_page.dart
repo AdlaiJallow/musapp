@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'dart:math';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:muslim_app/prayer_time.dart';
 import 'quran_verses.dart';
 import 'tasbih_page.dart';
 import 'dart:ui'; // Import for blur effect
@@ -176,6 +177,10 @@ class _HomePageState extends State<HomePage> {
                       child: ElevatedButton.icon(
                         onPressed: () {
                           // Add another feature here (e.g., Prayer Times)
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => const PrayerTime()));
                         },
                         style: ElevatedButton.styleFrom(
                           backgroundColor: Colors.white.withOpacity(0.85),
